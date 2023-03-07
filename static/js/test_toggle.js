@@ -84,52 +84,54 @@ const semgrepIntegration = {
                 </div>
             </div>
             <div class="form-group">
-                <h9>Ruleset</h9>
-                <p>
-                    <h13>Path to ruleset.yml</h13>
-                </p>
-                <input type="text" class="form-control form-control-alternative"
-                    placeholder=""
-                    v-model="ruleset"
-                    :class="{ 'is-invalid': error.ruleset }">
-                <div class="invalid-feedback">[[ error.ruleset ]]</div>
-            
-                <h9>Save intermediates to</h9>
-                <p>
-                    <h13>Optional</h13>
-                </p>
-                <input type="text" class="form-control form-control-alternative"
-                    placeholder=""
-                    v-model="save_intermediates_to"
-                    :class="{ 'is-invalid': error.save_intermediates_to }">
-                <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
+                <form autocomplete="off">
+                    <h9>Ruleset</h9>
+                    <p>
+                        <h13>Path to ruleset.yml</h13>
+                    </p>
+                    <input type="text" class="form-control form-control-alternative"
+                        placeholder=""
+                        v-model="ruleset"
+                        :class="{ 'is-invalid': error.ruleset }">
+                    <div class="invalid-feedback">[[ error.ruleset ]]</div>
+                
+                    <h9>Save intermediates to</h9>
+                    <p>
+                        <h13>Optional</h13>
+                    </p>
+                    <input type="text" class="form-control form-control-alternative"
+                        placeholder=""
+                        v-model="save_intermediates_to"
+                        :class="{ 'is-invalid': error.save_intermediates_to }">
+                    <div class="invalid-feedback">[[ error.save_intermediates_to ]]</div>
 
-                <div class="form-group form-row">
-                    <div class="col-6">
-                        <h9>Timeout threshold</h9>
-                        <p>
-                            <h13>Optional</h13>
-                        </p>
-                        <input type="number" class="form-control form-control-alternative"
-                            placeholder=""
-                            v-model="timeout_threshold"
-                            :class="{ 'is-invalid': error.timeout_threshold }"
-                        >
-                        <div class="invalid-feedback">[[ error.timeout_threshold ]]</div>
+                    <div class="form-group form-row">
+                        <div class="col-6">
+                            <h9>Timeout threshold</h9>
+                            <p>
+                                <h13>Optional</h13>
+                            </p>
+                            <input type="number" class="form-control form-control-alternative"
+                                placeholder=""
+                                v-model="timeout_threshold"
+                                :class="{ 'is-invalid': error.timeout_threshold }"
+                            >
+                            <div class="invalid-feedback">[[ error.timeout_threshold ]]</div>
+                        </div>
+                        <div class="col-6">
+                            <h9>Timeout</h9>
+                            <p>
+                                <h13>Optional</h13>
+                            </p>
+                            <input type="number" class="form-control form-control-alternative"
+                                placeholder=""
+                                v-model="timeout"
+                                :class="{ 'is-invalid': error.timeout }"
+                            >
+                            <div class="invalid-feedback">[[ error.timeout ]]</div>
+                        </div>
                     </div>
-                    <div class="col-6">
-                        <h9>Timeout</h9>
-                        <p>
-                            <h13>Optional</h13>
-                        </p>
-                        <input type="number" class="form-control form-control-alternative"
-                            placeholder=""
-                            v-model="timeout"
-                            :class="{ 'is-invalid': error.timeout }"
-                        >
-                        <div class="invalid-feedback">[[ error.timeout ]]</div>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     `
